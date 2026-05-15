@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오션중학교 국어교사 랜딩페이지</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;800&display=swap');
+        body { font-family: 'Pretendard', sans-serif; }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 50%, #3730a3 100%);
+        }
+        .scroll-nav {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+        }
+        .scroll-nav .nav-link { color: #475569; }
+        .scroll-nav .nav-text { color: #1d4ed8; }
+        html { scroll-behavior: smooth; }
+        
+        /* 로고 이미지 스타일 */
+        .logo-img {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-900 leading-relaxed">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-6">
+        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <!-- Logo Image and Text -->
+                <a href="#" class="flex items-center gap-3">
+                    <img src="./imge/logo.png" alt="오션 국어 교실 로고" class="logo-img" onerror="this.parentElement.querySelector('img').style.display='none'">
+                    <span id="nav-text" class="nav-text font-bold text-xl md:text-2xl tracking-tight text-white transition-colors">
+                        오션 국어 교실
+                    </span>
+                </a>
+            </div>
+            <div id="nav-links" class="hidden md:flex gap-8 font-medium text-white/90 transition-colors">
+                <a href="#about" class="nav-link hover:text-blue-400 transition-colors">소개</a>
+                <a href="#curriculum" class="nav-link hover:text-blue-400 transition-colors">수업</a>
+                <a href="#plogging" class="nav-link hover:text-blue-400 transition-colors">동아리</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-[90vh] flex items-center justify-center overflow-hidden hero-gradient">
+        <div class="absolute inset-0 opacity-20">
+            <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0 100 C 20 0 50 0 100 100 Z" fill="white"></path>
+            </svg>
+        </div>
+        <div class="relative z-10 text-center px-6">
+            <div class="inline-block px-4 py-1 rounded-full bg-blue-100 text-blue-700 font-semibold text-sm mb-6 animate-bounce">
+                오션중학교 국어 교과 담당
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 drop-shadow-lg">
+                언어로 소통하고<br>행동으로 실천합니다
+            </h1>
+            <p class="text-xl md:text-2xl text-blue-50/90 mb-10 max-w-2xl mx-auto">
+                안녕하세요. 오션중학교에서 1학년 학생들과 함께<br>따뜻한 국어 수업과 플로깅 동아리를 운영하는 국어교사입니다.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#about" class="px-8 py-4 bg-white text-blue-700 rounded-xl font-bold hover:bg-blue-50 transition-all shadow-lg flex items-center justify-center gap-2">
+                    활동 더 알아보기 <i class="fa-solid fa-chevron-right text-sm"></i>
+                </a>
+                <!-- 질문하기 Button -->
+                <button class="px-8 py-4 bg-amber-400 text-slate-900 rounded-xl font-bold hover:bg-amber-300 transition-all shadow-lg flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-comment-dots"></i> 질문하기
+                </button>
+                <button class="px-8 py-4 bg-blue-900/30 text-white border border-white/30 backdrop-blur-md rounded-xl font-bold hover:bg-blue-900/40 transition-all">
+                    상담 신청
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="about" class="py-24 px-6 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-12">
+            <!-- Card 1 -->
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="bg-blue-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-graduation-cap text-blue-600 text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">교육 철학</h3>
+                <p class="text-slate-600 leading-relaxed">
+                    글 속에서 세상을 읽고, 발걸음으로 세상을 바꿉니다. 중학교 1학년, 새로운 시작을 맞이한 학생들의 문해력 성장과 올바른 인성 함양을 위해 동행합니다.
+                </p>
+            </div>
+            <!-- Card 2 -->
+            <div id="curriculum" class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="bg-blue-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-book-open text-blue-600 text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">국어 수업</h3>
+                <p class="text-slate-600 leading-relaxed">
+                    문학의 감수성부터 비문학의 논리까지, 1학년 교육과정 전반을 아우르는 깊이 있는 수업을 진행합니다. 단순히 읽는 법을 넘어, 스스로 생각하는 힘을 기릅니다.
+                </p>
+            </div>
+            <!-- Card 3 -->
+            <div id="plogging" class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="bg-green-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-recycle text-green-600 text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">플로깅 동아리</h3>
+                <p class="text-slate-600 leading-relaxed">
+                    조깅을 하며 쓰레기를 줍는 환경 운동, 플로깅을 통해 우리 오션중학교 주변과 지역사회를 건강하게 만듭니다. 몸도 마음도 튼튼해지는 실천형 교육입니다.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Content Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="flex-1 space-y-6">
+                    <h2 class="text-4xl font-bold text-slate-900 leading-tight">
+                        왜 국어와 플로깅인가요?
+                    </h2>
+                    <div class="w-20 h-1.5 bg-blue-600 rounded-full"></div>
+                    <p class="text-lg text-slate-600">
+                        국어는 단순한 지식 전달이 아닌 <b>'공감'</b>과 <b>'표현'</b>의 학문입니다. 텍스트를 통해 타인의 마음에 공감하고 세상을 이해하는 능력을 길렀다면, 그 마음을 실질적인 <b>'실천'</b>으로 옮기는 연습이 필요합니다.
+                    </p>
+                    <div class="space-y-4 pt-4">
+                        <div class="flex gap-4 items-start">
+                            <div class="mt-1 bg-blue-100 p-2 rounded-lg"><i class="fa-solid fa-users text-blue-600"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg text-slate-800">소통 중심 수업</h4>
+                                <p class="text-slate-500">학생들의 자유로운 발언과 토론이 살아있는 1학년 맞춤형 교실</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="mt-1 bg-green-100 p-2 rounded-lg"><i class="fa-solid fa-heart text-green-600"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg text-slate-800">생태 전환 교육</h4>
+                                <p class="text-slate-500">환경의 소중함을 직접 몸으로 느끼며 자라는 미래 시민 의식</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 w-full">
+                    <div class="relative group">
+                        <div class="absolute -inset-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl blur opacity-20 group-hover:opacity-30 transition"></div>
+                        <div class="relative bg-slate-200 rounded-2xl overflow-hidden aspect-video shadow-2xl flex items-center justify-center border border-slate-100">
+                            <img 
+                                src="https://images.unsplash.com/photo-1544652478-6653e09f18a2?auto=format&fit=crop&q=80&w=1000" 
+                                alt="학교 수업과 플로깅"
+                                class="w-full h-full object-cover"
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer class="bg-slate-900 text-white py-20 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+            <div class="space-y-4">
+                <h2 class="text-3xl font-bold text-blue-400">오션 국어 교실</h2>
+                <p class="text-slate-400 max-w-sm">
+                    부산광역시 강서구 명지동 오션중학교<br>
+                    본관 2층 1학년 교무실
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full md:w-auto">
+                <div class="flex items-center gap-4 group cursor-pointer">
+                    <div class="bg-slate-800 p-4 rounded-full group-hover:bg-blue-600 transition-colors">
+                        <i class="fa-solid fa-envelope text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm text-slate-400 font-medium uppercase tracking-wider">이메일 문의</p>
+                        <p class="text-lg">teacher@ocean.ms.kr</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 group cursor-pointer">
+                    <div class="bg-slate-800 p-4 rounded-full group-hover:bg-blue-600 transition-colors">
+                        <i class="fa-solid fa-location-dot text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm text-slate-400 font-medium uppercase tracking-wider">위치</p>
+                        <p class="text-lg">오션중학교 교무실</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto border-t border-slate-800 mt-16 pt-8 text-center text-slate-500 text-sm">
+            &copy; <span id="year"></span> Ocean Middle School. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // 현재 연도 설정
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // 내비게이션 바 스크롤 로직
+        const navbar = document.getElementById('navbar');
+        const navText = document.getElementById('nav-text');
+        const navLinks = document.getElementById('nav-links');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scroll-nav');
+                navText.classList.remove('text-white');
+                navText.classList.add('text-blue-700');
+                navLinks.classList.remove('text-white/90');
+                navLinks.classList.add('text-slate-600');
+            } else {
+                navbar.classList.remove('scroll-nav');
+                navText.classList.add('text-white');
+                navText.classList.remove('text-blue-700');
+                navLinks.classList.add('text-white/90');
+                navLinks.classList.remove('text-slate-600');
+            }
+        });
+    </script>
+</body>
+</html>
